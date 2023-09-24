@@ -1,0 +1,40 @@
+FoamFile
+{
+	version	2.0;
+	format	binary;
+	class	volVectorField;
+	location	"0";
+	object	U;
+	arch	"LSB;label=32;scalar=64";
+}
+dimensions	[0 1 -1 0 0 0 0];
+internalField	uniform (90.0 0.0 0.0);
+boundaryField
+{
+	empty
+	{
+		type	empty;
+	}
+	inlet
+	{
+		type	freestream;
+		freestreamValue	uniform (90.0 0.0 0.0);
+	}
+	outlet
+	{
+		type	pressureInletOutletVelocity;
+		value	uniform (90.0 0.0 0.0);
+	}
+	upper
+	{
+		type	noSlip;
+	}
+	lower
+	{
+		type	noSlip;
+	}
+	tip
+	{
+		type	noSlip;
+	}
+}

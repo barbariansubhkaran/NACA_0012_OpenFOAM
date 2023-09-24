@@ -1,0 +1,43 @@
+FoamFile
+{
+	version	2.0;
+	format	binary;
+	class	volScalarField;
+	location	"0";
+	object	nut;
+	arch	"LSB;label=32;scalar=64";
+}
+dimensions	[0 2 -1 0 0 0 0];
+internalField	uniform 0.1;
+boundaryField
+{
+	empty
+	{
+		type	empty;
+	}
+	inlet
+	{
+		type	calculated;
+		value	uniform 0.1;
+	}
+	outlet
+	{
+		type	calculated;
+		value	uniform 0.1;
+	}
+	upper
+	{
+		type	nutUWallFunction;
+		value	uniform 0.1;
+	}
+	lower
+	{
+		type	nutUWallFunction;
+		value	uniform 0.1;
+	}
+	tip
+	{
+		type	nutUWallFunction;
+		value	uniform 0.1;
+	}
+}
