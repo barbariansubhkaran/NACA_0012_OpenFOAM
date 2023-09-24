@@ -16,9 +16,8 @@ p
 		}
 		inlet
 		{
-			type	totalPressure;
-			p0	uniform 0.0;
-			gamma	0;
+			type	freestreamPressure;
+			freestreamValue	uniform 0.0;
 		}
 		outlet
 		{
@@ -55,6 +54,7 @@ U
 		outlet
 		{
 			type	pressureInletOutletVelocity;
+			value	uniform (90.0 0.0 0.0);
 		}
 		upper
 		{
@@ -81,6 +81,7 @@ k
 		inlet
 		{
 			type	turbulentIntensityKineticEnergyInlet;
+			value	uniform 0.1;
 			intensity	0.05;
 		}
 		outlet
@@ -90,14 +91,17 @@ k
 		upper
 		{
 			type	kqRWallFunction;
+			value	uniform 0.1;
 		}
 		lower
 		{
 			type	kqRWallFunction;
+			value	uniform 0.1;
 		}
 		tip
 		{
 			type	kqRWallFunction;
+			value	uniform 0.1;
 		}
 	}
 }
@@ -112,6 +116,7 @@ omega
 		inlet
 		{
 			type	turbulentMixingLengthFrequencyInlet;
+			value	uniform 100.0;
 			mixingLength	0.07;
 		}
 		outlet
@@ -121,14 +126,17 @@ omega
 		upper
 		{
 			type	omegaWallFunction;
+			value	uniform 100.0;
 		}
 		lower
 		{
 			type	omegaWallFunction;
+			value	uniform 100.0;
 		}
 		tip
 		{
 			type	omegaWallFunction;
+			value	uniform 100.0;
 		}
 	}
 }
@@ -143,14 +151,17 @@ nut
 		upper
 		{
 			type	nutUWallFunction;
+			value	uniform 0.1;
 		}
 		lower
 		{
 			type	nutUWallFunction;
+			value	uniform 0.1;
 		}
 		tip
 		{
 			type	nutUWallFunction;
+			value	uniform 0.1;
 		}
 	}
 }

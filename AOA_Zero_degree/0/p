@@ -17,9 +17,8 @@ boundaryField
 	}
 	inlet
 	{
-		type	totalPressure;
-		p0	uniform 0.0;
-		gamma	0;
+		type	freestreamPressure;
+		freestreamValue	uniform 0.0;
 	}
 	outlet
 	{
