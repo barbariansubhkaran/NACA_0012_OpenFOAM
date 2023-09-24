@@ -11,10 +11,13 @@
 ### NACA 0012 airflow with varing angle of attack. Different AOA has it's own case with change in geometry.
 
 + Running the case :-
-
+```
 ./Allrun
 
+```
 
 ### Based on the work of :-
-
+```
 SimFlow - Airfoil (NACA 0012) - CFD Simulation
+
+```
