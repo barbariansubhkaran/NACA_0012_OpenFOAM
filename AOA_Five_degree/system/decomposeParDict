@@ -6,6 +6,6 @@ FoamFile
 	location	"system";
 	object	decomposeParDict;
 }
-numberOfSubdomains	2;
+numberOfSubdomains	4;
 method	scotch;
 distributed	false;
