@@ -12,7 +12,7 @@
 
 + Running the case :-
 ```
-./Allrun
+./Allrun.sh
 
 ```
 
