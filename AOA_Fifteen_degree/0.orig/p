@@ -1,0 +1,40 @@
+FoamFile
+{
+	version	2.0;
+	format	binary;
+	class	volScalarField;
+	location	"0";
+	object	p;
+	arch	"LSB;label=32;scalar=64";
+}
+dimensions	[0 2 -2 0 0 0 0];
+internalField	uniform 0.0;
+boundaryField
+{
+	empty
+	{
+		type	empty;
+	}
+	inlet
+	{
+		type	freestreamPressure;
+		freestreamValue	uniform 0.0;
+	}
+	outlet
+	{
+		type	fixedValue;
+		value	uniform 0.0;
+	}
+	upper
+	{
+		type	zeroGradient;
+	}
+	lower
+	{
+		type	zeroGradient;
+	}
+	tip
+	{
+		type	zeroGradient;
+	}
+}
